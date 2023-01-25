@@ -3,8 +3,9 @@ var router = express.Router();
 var booksCtrl = require('../controllers/books');
 
 
-router.get('/', function(req, res, next) {
-  res.redirect('./');
-});
+
+router.get('/', booksCtrl.index);
+router.get('/', booksCtrl.new);
+
 
 module.exports = router;

@@ -17,7 +17,7 @@ const bookSchema = new Schema ({
      },
     genre: {
         type: [String],
-        enum: ['Psychological Thriller', 'Fiction', 'Non-Fiction', 'Historical Fiction', 'Horror', 'Fantasy', 'Drama', 'Biography', 'Mystery', 'Poetry', 'Espistolary Novel'],
+        enum: ['Psychological Thriller', 'Fiction', 'Non-Fiction', 'Historical Fiction', 'Horror', 'Fantasy', 'Drama', 'Biography', 'Mystery', 'Poetry', 'Espistolary Novel', 'Exhibition Catalogue','Gothic'],
         required: true,
     },
     pages: {

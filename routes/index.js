@@ -4,12 +4,8 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'The Book Nook' });
+  res.render('index');
 });
-
-router.get('./books', function showAll(req, res, next) {
-  res.render('./books')
-})
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
@@ -19,7 +15,7 @@ router.get('/auth/google', passport.authenticate(
     // Requesting the user's profile and email
     scope: ['profile', 'email'],
     // Optionally force pick account every time
-    // prompt: "select_account"
+    prompt: "select_account"
   }
 ));
 
@@ -28,14 +24,14 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     successRedirect: '/books',
-    failureRedirect: '/books'
+    failureRedirect: '/'
   }
 ));
 
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout(function() {
-    res.redirect('/books');
+    res.redirect('/');
   });
 });
 

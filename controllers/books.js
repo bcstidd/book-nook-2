@@ -2,18 +2,20 @@ const Book = require('../models/book');
 
 module.exports = {
   index,
+  new: newBook
 };
 
 function index(req, res) {
   Book.find({}, function (err, books) {
-    res.render("index/books", { books })
-    console.log('This hits the books page');
+    res.render("books/collection", { books })
+    console.log('This hits the home page');
   });
 }
 
-function showAll(req, res) {
-  Book.findById(req.params.id)
-  console.log(all)
-  res.render("books/show", { title: "Book Detail", book });
+function newBook(req, res) {
+   res.render('books/new', {title:'Add Book'});
+}
 
+function create(req, res) {
+  const Book = new Book(req.body)
 }
