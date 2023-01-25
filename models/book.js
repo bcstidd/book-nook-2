@@ -15,13 +15,14 @@ const bookSchema = new Schema ({
         min: 1696,
         required: true,
      },
- 
     genre: {
         type: [String],
-        enum: ['Not Listed', 'Fiction', 'Non-Fiction', 'Historical Fiction', 'Horror', 'Fantasy', 'Drama', 'Biography', 'Mystery', 'Poetry'],
+        enum: ['Psychological Thriller', 'Fiction', 'Non-Fiction', 'Historical Fiction', 'Horror', 'Fantasy', 'Drama', 'Biography', 'Mystery', 'Poetry', 'Espistolary Novel'],
         required: true,
     },
-    rating: [ratingSchema],
+    pages: {
+        type: Number,
+    },
 })
 
 module.exports = mongoose.model('Book', bookSchema);
