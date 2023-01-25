@@ -5,18 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session')
 const passport = require('passport')
-const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const User = require('../models/user')
-const methodOverride = require('method-override')
+// const User = require('../models/book')
 
 // Load the "secrets" in the .env file
 require('dotenv').config();
 // Connect to the MongoDB database
 require('./config/database');
-require('./config/passport')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var booksRouter = require('./routes/books');
 
 var app = express();
 
@@ -38,7 +35,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/books', booksRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
