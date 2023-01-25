@@ -3,15 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-// const session = require('express-session')
-// const passport = require('passport')
-// const methodOverride = require('method-override')
+const session = require('express-session')
+const passport = require('passport')
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+const User = require('../models/user')
+const methodOverride = require('method-override')
 
 // Load the "secrets" in the .env file
 require('dotenv').config();
 // Connect to the MongoDB database
 require('./config/database');
-// require('./config/passport')
+require('./config/passport')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,6 +28,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
