@@ -11,12 +11,12 @@
 </head>
 <body>
     <nav>
-        <!-- <% if (user) { %> -->
-        <a href="/" <%- title === 'Books' ? 'class="active"' : '' %>>Home</a>
+        <% if (user) { %>
+        <a href="/" <%- title === 'Books'%>></a>
           <a href="/logout">LOG OUT</a>
-        <!-- <% } else { %> -->
-          <!-- <a href="/auth/google" class="login">Log in</a> -->
-        <!-- <% } %> -->
+        <% } else { %>
+          <a href="/auth/google" class="login">Log in&nbsp;</a>
+        <% } %>
       </nav>
-    <main>
+  
         

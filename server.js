@@ -11,7 +11,7 @@ const passport = require('passport')
 require('dotenv').config();
 // Connect to the MongoDB database
 require('./config/database');
-
+require('./config/passport');
 var indexRouter = require('./routes/index');
 var booksRouter = require('./routes/books');
 
