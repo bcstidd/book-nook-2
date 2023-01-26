@@ -1,7 +1,5 @@
 <%- include('../partials/header') %>
-<%if (user) { %>}
-<!-- <form id="show-page" method="GET"> -->
-<a href="/books">Details</a>
+<!-- <%if (user) { %>} -->
 <section id ="show-page">
      <div>Title:</div>
      <div><%= book.title %></div>
@@ -17,6 +15,7 @@
      <div><%= book.pages %></div>
 </section>
 </form>
+<!-- <% } %> -->
 <!-- <br><br><h2>Reviews</h2>
 <% if(user) { %>
   <form id="add-review-form" method="POST"
