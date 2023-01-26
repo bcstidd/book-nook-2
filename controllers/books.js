@@ -2,20 +2,12 @@ const Book = require('../models/book');
 
 module.exports = {
   index,
-  new: newBook
 };
 
-function index(req, res) {
+function index(_req, res) {
   Book.find({}, function (err, books) {
-    res.render("books/collection", { books })
-    console.log('This hits the home page');
+    res.render("books/index", {title: 'All Books', books})
+    // console.log('data');
   });
 }
 
-function newBook(req, res) {
-   res.render('books/new', {title:'Add Book'});
-}
-
-function create(req, res) {
-  const Book = new Book(req.body)
-}

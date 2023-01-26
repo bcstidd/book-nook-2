@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<h1>The Book Nook</h1>
+<table id="list">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th><a href="show.ejs"></a> Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% books.forEach(function(b) { %>
+        <tr>
+          <td><%= b.title %></td>
+          <td><%= b.author %></td>
+          <!-- <td><%=b.details %></td> -->
+          <!-- <td><a href="books/<%= b._id%>">DETAILS</a></td> -->
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+<%- include('../partials/footer') %>

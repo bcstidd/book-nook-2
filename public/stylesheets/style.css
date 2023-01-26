@@ -29,3 +29,14 @@ nav {
   margin-top: 100px;
   font-size:x-large;
 }
+h2 {
+  color: green;
+}
+
+table>tbody{
+  background-color: red;
+
+}
+th {
+  color: white;
+}
