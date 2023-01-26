@@ -2,6 +2,7 @@ const Book = require('../models/book');
 
 module.exports = {
   index,
+  show,
 };
 
 function index(req, res) {
@@ -10,6 +11,14 @@ function index(req, res) {
     // console.log('data');
   });
 }
+
+
+function show(req, res) {
+    Book.findById(req.params.id)
+        .exec(function (err, book) {
+        res.render("books/:id", { title: "Book Detail", book });
+      });
+  }
 
 
 

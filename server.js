@@ -14,7 +14,7 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var booksRouter = require('./routes/books');
-var showRouter = require('./routes/show')
+
 var app = express();
 
 // view engine setup
@@ -42,7 +42,6 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/books', booksRouter);
-app.use('./books/show', showRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

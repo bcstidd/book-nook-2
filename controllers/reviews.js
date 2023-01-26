@@ -21,11 +21,11 @@ function create(req, res) {
 
 // async function deleteReview(req, res, next) {
 //     try {
-//         const movie = await Movie.findOne({'reviews._id': req.params.id})
-//         if (!movie) return res.redirect('/movies')
-//         movie.reviews.remove(req.params.id)
-//         await movie.save()
-//         res.redirect(`/movies/${movie._id}`)
+//         const Book = await Book.findOne({'reviews._id': req.params.id})
+//         if (!book) return res.redirect('/books')
+//         book.reviews.remove(req.params.id)
+//         await book.save()
+//         res.redirect(`/books/${book._id}`)
 //     } catch(err) {
 //         return next(err)
 //     }
