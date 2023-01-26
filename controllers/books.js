@@ -4,10 +4,12 @@ module.exports = {
   index,
 };
 
-function index(_req, res) {
+function index(req, res) {
   Book.find({}, function (err, books) {
     res.render("books/index", {title: 'All Books', books})
     // console.log('data');
   });
 }
+
+
 

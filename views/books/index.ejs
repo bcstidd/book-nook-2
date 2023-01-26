@@ -6,17 +6,20 @@
       <tr>
         <th>Title</th>
         <th>Author</th>
-        <th><a href="show.ejs"></a> Details</th>
       </tr>
     </thead>
     <tbody>
       <% books.forEach(function(b) { %>
+        
         <tr>
           <td><%= b.title %></td>
           <td><%= b.author %></td>
+          <td><a href="books/<%= b._id %>/show">Details</a>
+          </td>
           <!-- <td><%=b.details %></td> -->
           <!-- <td><a href="books/<%= b._id%>">DETAILS</a></td> -->
         </tr>
+      </div>
         <% }); %>
       </tbody>
     </table>

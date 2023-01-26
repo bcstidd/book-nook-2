@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const books = require('../data')
+const book = require('../data')
 
 const bookSchema = new Schema ({
     title: {

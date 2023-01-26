@@ -10,6 +10,13 @@
 
 </head>
 <body>
-<nav><a href="/login" <%- title ='login'%>>Log In</a></nav>
-
-    
+    <nav>
+        <!-- <% if (user) { %> -->
+        <a href="/" <%- title === 'All Books' ? 'class="active"' : '' %>>Home</a>
+          <a href="/logout">LOG OUT</a>
+        <!-- <% } else { %> -->
+          <a href="/auth/google" class="login">Log in</a>
+        <!-- <% } %> -->
+      </nav>
+    <main>
+        

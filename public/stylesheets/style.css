@@ -29,14 +29,23 @@ nav {
   margin-top: 100px;
   font-size:x-large;
 }
-h2 {
-  color: green;
-}
+
 
 table>tbody{
   background-color: red;
-
+  font-size: large;
 }
 th {
   color: white;
 }
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+h2 {
+  font-size: xx-large;
+ }
