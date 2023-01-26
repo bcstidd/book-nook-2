@@ -14,9 +14,9 @@ function index(req, res) {
 
 function show(req, res) {
     Book.findById(req.params.id)
-        .exec(function (err, book) {
-        res.render("books/", { title: "Book Detail", book });
-      });
+        // .exec(function (err, book) {
+        res.render("/:id", { title: "Book Detail", book });
+      
   }
 
 
