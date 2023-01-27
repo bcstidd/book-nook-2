@@ -11,14 +11,6 @@ function index(req, res) {
   });
 }
 
-
-// function show(req, res) {
-//     Book.findById(req.params.id)
-//         .exec(function (err, book) {
-//         res.render("/:id", { title: "Book Detail", book });
-//   });
-// }
-
 function show(req, res) {
   Book.findById(req.params.id, function(err, book) {
       res.render('books/show', { book })

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const book = require('../data')
+// const book = require('../data')
 
 const bookSchema = new Schema ({
     title: {
@@ -24,6 +24,9 @@ const bookSchema = new Schema ({
     pages: {
         type: Number,
     },
+    reviews: {
+        type: [String],
+    }
 })
 
 module.exports = mongoose.model('Book', bookSchema);
