@@ -1,25 +1,27 @@
 <%- include('../partials/header') %>
-<!-- <%if (user) { %>} -->
+<%if (user) { %>}
 <section id ="show-page">
-     <div>Title:</div>
-     <div><%= book.title %></div>
-     <div>Author</div>
-     <div><%= book.author %></div>
-     <div>Published</div>
-     <div><%= book.published %></div>
-     <div>Genre</div>
-     <div><%= book.genre %></div>
-     <div>Rating</div>
-     <div><%= book.rating %></div>
-     <div>Page Count</div>
-     <div><%= book.pages %></div>
-     <div>Reviews</div>
-     <div><%= book.reviews %></div>
+     <table id="details">
+
+  <th><div>Title:</th>
+     <td><%= book.title %></td></div>
+     <td><div>Author</td>
+     <td><%= book.author %></div></td>
+     <td><div>Published</td>
+     <td><%= book.published %></div></td>
+     <td><div>Genre</td>
+     <td><%= book.genre %></div></td>
+     <td><div>Page Count<td>
+     <td><%= book.pages %></div></td>
+     <td><div>Reviews</td>
+     <td><%= book.reviews %></div></td>
+     </table>
 </section>
  <% } %> 
- <br><br><h2>Reviews</h2>
+ <br><br><h2>Add a Review</h2>
+ 
 <% if(user) { %>
-  <form id="add-review-form" method="POST"
+  <form id="add-review-form" method="GET"
     action="/books/<%= book._id %>/reviews">
     <label>Review:</label>
     <textarea name="content"></textarea>
@@ -31,10 +33,11 @@
       <option value="4">4</option>
       <option value="5" selected>5</option>
     </select>
-    <input type="submit" value="Add Review">
+    <a href="/reviews/new">Add Review</a>
   </form>
 <% } %> 
-<% if (book.reviews.length) { %>
+<% if (book.reviews && book.reviews.length) { %>
+  <%= book.reviews[0].reviews.length %>
   <table>
     <thead>
       <tr>
@@ -54,8 +57,7 @@
           <td><%= r.createdAt.toLocaleDateString() %></td>
           <td><%= r.content %></td>
           <td><%= r.rating %></td>
-          <td>
-            <% if (user?._id.equals(r.user)) { %>
+          <td><% if (user?._id.equals(r.user)) { %>
               <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
               </form>
@@ -72,6 +74,6 @@
   
 <% } else { %>
   <h5>Be the first to review!</h5>
-<% } %>
+<% } %> 
 
 <%- include('../partials/footer') %>

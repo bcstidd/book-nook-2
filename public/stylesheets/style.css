@@ -32,7 +32,8 @@ nav {
 
 
 table>tbody{
-  background-color: red;
+  background-color: grey;
+  font-display: white;
   font-size: large;
 }
 th {
@@ -48,8 +49,32 @@ th {
 
 h2 {
   font-size: xx-large;
+  color: white;
+  border: 2px solid white;
  }
 
  h3 {
   color: white;
  }
+
+ div {
+  color: white;
+ }
+h5 {
+  font-size: x-large;
+  color:chartreuse;
+}
+
+label{ 
+  font-size: large;
+  color:aquamarine ;
+}
+
+#details>tbody>tr {
+  display: flex;
+  flex-direction: column;
+}
+
+#list>tbody {
+  background-color: white;
+}

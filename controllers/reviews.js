@@ -1,10 +1,15 @@
 const Book = require('../models/book')
 
 module.exports = {
+    new: newReview,
     create,
-    delete: deleteReview
+    delete: deleteReview,
+   
+};
+	
+function newReview(req, res) {
+  res.redirect('reviews/new', { title: 'Add Review' });
 }
-
 function create(req, res) {
     Book.findById(req.params.id, function(err, book) {
         req.body.user = req.user._id
@@ -12,7 +17,7 @@ function create(req, res) {
         req.body.userAvatar = req.user.avatar
         book.reviews.push(req.body)
         book.save(function(err) {
-            res.redirect(`/books/${req.params.id}`)
+            res.redirect(`./books/${book._id}`)
     })
 })
 }
@@ -28,3 +33,4 @@ async function deleteReview(req, res, next) {
         return next(err)
     }
 }
+

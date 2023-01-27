@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// const book = require('../data')
+const book = require('../data')
 const reviewSchema = new Schema({
     content: {
       type: String,
@@ -44,15 +44,8 @@ const bookSchema = new Schema ({
     },
     pages: {
         type: Number,
-    },
-    reviews: {
-        type: [String],
-    },
-    ratings: {
-        type: Number,
-        min: 1,
-        max: 5,
-        default: 5,
+        reviews: [reviewSchema],
+        required: true,
     }
 })
 
