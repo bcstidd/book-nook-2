@@ -2,7 +2,7 @@ const Book = require('../models/book')
 
 module.exports = {
     create,
-    // delete: deleteReview
+    delete: deleteReview
 }
 
 function create(req, res) {
@@ -12,9 +12,9 @@ function create(req, res) {
         req.body.userAvatar = req.user.avatar
         book.reviews.push(req.body)
         book.save(function(err) {
-            res.redirect(`/books/${book._id}`)
-        })
+            res.redirect(`/books/${req.params.id}`)
     })
+})
 }
 
 async function deleteReview(req, res, next) {

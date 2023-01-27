@@ -44,8 +44,7 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/books', booksRouter);
-app.use('/', reviewsRouter);
-
+app.use('reviews', reviewsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
