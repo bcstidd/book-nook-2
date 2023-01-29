@@ -4,23 +4,23 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
-var fs = require('fs')
+// var fs = require('fs')
 
-const multer = require('multer');
+// const multer = require('multer');
  
-const imageStorage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads')
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-});
+// const imageStorage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, 'uploads')
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, file.fieldname + '-' + Date.now())
+//     }
+// });
  
 
 const session = require('express-session')
 const passport = require('passport')
-// const User = require('../models/book')
+// const User = require('../models/user')
 
 // Load the "secrets" in the .env file
 require('dotenv').config();
@@ -61,7 +61,7 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/books', booksRouter);
-app.use('/reviews', reviewsRouter);
+app.use('/books/reviews', reviewsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

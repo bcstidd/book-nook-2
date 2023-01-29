@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 const imageSchema = new Schema({
   title: String,
+  link: String,
 });
 
 const reviewSchema = new Schema({
@@ -56,8 +57,8 @@ const bookSchema = new Schema ({
     pages: {
         type: Number,
         required: true,
-        reviews: [reviewSchema],
-    }
+      },
+      reviews: [reviewSchema],
     })
   
 

@@ -186,36 +186,36 @@ exports.books = [
     
 exports.images = [
  {
-  title: 'The Stranger'
-  link: ''
+  title: 'The Stranger',
+  link: 'https://i.imgur.com/IHOnK5t.jpg',
  },
  {
-  title: 'Untamed'
-  link: ''
+  title: 'Untamed',
+  link: 'https://i.imgur.com/Xdo88Vo.jpg',
  },
  {
-  title: 'Dracula'
-  link: ''
+  title: 'Dracula',
+  link: 'https://i.imgur.com/SA2uP4f.jpg'
  },
  {
-  title: 'Where the Crawdads Sing'
-  link: ''
+  title: 'Where the Crawdads Sing',
+  link: 'https://i.imgur.com/f4mRrE1.jpg'
  },
  {
-  title: 'The Alchemist'
-  link: ''
+  title: 'The Alchemist',
+  link: 'https://i.imgur.com/HAvUOge.jpg'
  },
  {
   title: 'We Ate the Acid'
-  link: ''
+  link: 'https://i.imgur.com/xuoJaM3.jpg'
  },
  {
   title: 'Adventures of Huckleberry Finn'
-  link: ''
+  link: 'https://i.imgur.com/d9MVVT3.jpg'
  },
  {
   title: 'The Kite Runner'
-  link: ''
+  link: 'https://i.imgur.com/Yon1wkr.jpg'
  },
  {
   title: 'Frankenstein'

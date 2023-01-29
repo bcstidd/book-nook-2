@@ -23,6 +23,9 @@ a {
 
 h1 {
   color: white;
+  font-style: (to right, #553c9a 45%, #ee4b2b);
+
+  
 }
 
 nav {
@@ -48,12 +51,15 @@ th {
 }
 
 h2 {
-  font-size: xx-large;
+  font-size: x-large;
   color: white;
   border: 2px solid white;
+  margin: center;
  }
 
  h3 {
+  font-size: large;
+  background: yellow;
   color: white;
  }
 
@@ -78,3 +84,18 @@ label{
 #list>tbody {
   background-color: white;
 }
+#new-form *,
+#add-review-form *,
+#add-performer-form * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#new-form input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+}
+  
+

@@ -13,7 +13,7 @@ function create(req, res) {
         req.body.userAvatar = req.user.avatar
         book.reviews.push(req.body)
         book.save(function(err) {
-            res.redirect(`./books/${book._id}`)
+            res.redirect(`/books/${book._id}`)
     })
 })
 }

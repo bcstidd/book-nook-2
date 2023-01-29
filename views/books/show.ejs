@@ -2,8 +2,7 @@
 <%if (user) { %>}
 <section id ="show-page">
      <table id="details">
-      <td><div><%=image.cover%>
-      <a href="books/<%= book.title/link %>"></a></div></td>
+      
      <td><div>Title:</div></td>
      <td><%= book.title %></td></div>
      <td><div>Author</td>
@@ -76,5 +75,4 @@
 <% } else { %>
   <h5>Be the first to review!</h5>
 <% } %> 
-
 <%- include('../partials/footer') %>
