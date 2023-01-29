@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
 const passport = require('passport');
-// const data = require('data')
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
+
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
@@ -34,5 +35,30 @@ router.get('/logout', function(req, res){
     res.redirect('/');
   });
 });
+
+router.get('/', (req, res) => {
+  imgModel.find({}, (err, items) => {
+      if (err) {
+          console.log(err);
+          res.status(500).send('An error occurred', err);
+      }
+      else {
+          res.render('imagesPage', { items: items });
+      }
+  });
+});
+
+router.get('/', (req, res) => {
+  imgModel.find({}, (err, items) => {
+      if (err) {
+          console.log(err);
+          res.status(500).send('An error occurred', err);
+      }
+      else {
+          res.render('imagesPage', { items: items });
+      }
+  });
+});
+
 
 module.exports = router;

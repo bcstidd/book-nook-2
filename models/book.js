@@ -1,11 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const book = require('../data')
+// const book = require('../data')
+
+const imageSchema = new Schema({
+  title: String,
+});
+
 const reviewSchema = new Schema({
-    content: {
+    
+    review: {
       type: String,
-      required: true
+      required: true,
     },
+      
     rating: {
       type: Number,
       min: 1,
@@ -23,7 +30,11 @@ const reviewSchema = new Schema({
     timestamps: true
   })
 
+
 const bookSchema = new Schema ({
+  cover: {  
+  type: [imageSchema]
+    },
     title: {
         type: String,
         required: true,
@@ -44,9 +55,11 @@ const bookSchema = new Schema ({
     },
     pages: {
         type: Number,
-        reviews: [reviewSchema],
         required: true,
+        reviews: [reviewSchema],
     }
-})
+    })
+  
 
 module.exports = mongoose.model('Book', bookSchema);
+

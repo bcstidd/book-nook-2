@@ -1,5 +1,6 @@
 exports.books = [
     {
+      cover: [],
       title: 'The Alchemist', 
       author: 'Paolo Coelho',
       published: 1993, 
@@ -9,6 +10,7 @@ exports.books = [
     },
       
     {
+      cover:,
       title: 'The Kite Runner', 
       author: 'Khaled Hosseini', 
       published: 2003,       
@@ -18,6 +20,7 @@ exports.books = [
    },
       
     {
+      cover: ,
       title: 'The Stranger', 
       author: 'Albert Camus',
       published: 1946, 
@@ -27,6 +30,7 @@ exports.books = [
     },
       
     {
+      cover:,
       title: 'Untamed', 
       author: 'Glennon Doyle',
       published: 2020, 
@@ -37,6 +41,7 @@ exports.books = [
      },
       
     {
+      cover:,
       title: 'Dracula', 
       author: 'Bram Stoker',
       published: 1897, 
@@ -47,6 +52,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'Where the Crawdads Sing', 
       author: 'Delia Owens',
       published: 2018, 
@@ -57,6 +63,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'We the Living', 
       author: 'Ayn Rand',
       published: 1936, 
@@ -66,6 +73,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'Jitterbug Perfume', 
       author: 'Tom Robbins',
       published: 1984, 
@@ -76,6 +84,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'We Ate the Acid', 
       author: 'Joe Roberts',
       published: 2018, 
@@ -85,6 +94,7 @@ exports.books = [
 
      },
     {
+      cover:,
       title: 'Adventures of Huckleberry Finn', 
       author: 'Mark Twain',
       published: 1884, 
@@ -93,6 +103,7 @@ exports.books = [
       reviews: [],
     },
     {
+      cover:,
       title: 'Not Without Laughter', 
       author: 'Langston Hughes',
       published: 1930, 
@@ -102,6 +113,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'Frankenstein', 
       author: 'Mary Shelley',
       published: 1818, 
@@ -111,6 +123,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'Of Mice and Men', 
       author: 'John Steinbeck',
       published: 1937, 
@@ -120,6 +133,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'The Picture of Dorian Gray', 
       author: 'Oscar Wilde',
       published: 1890, 
@@ -129,6 +143,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'War and Peace', 
       author: 'Leo Tolstoy',
       published: 1812, 
@@ -139,6 +154,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'Treasure Island', 
       author: 'Robert Louis Stevenson',
       published: 1882, 
@@ -147,6 +163,7 @@ exports.books = [
       reviews: [],
     },
     {
+      cover:,
       title: 'Their Eyes Were Watching God', 
       author: 'Zora Neale Hurston',
       published: 1937, 
@@ -156,6 +173,7 @@ exports.books = [
     },
     
     {
+      cover:,
       title: 'A Raisin in the Sun', 
       author: 'Lorainne Hansberry',
       published: 1958, 
@@ -166,3 +184,77 @@ exports.books = [
   
     ];
     
+exports.images = [
+ {
+  title: 'The Stranger'
+  link: ''
+ },
+ {
+  title: 'Untamed'
+  link: ''
+ },
+ {
+  title: 'Dracula'
+  link: ''
+ },
+ {
+  title: 'Where the Crawdads Sing'
+  link: ''
+ },
+ {
+  title: 'The Alchemist'
+  link: ''
+ },
+ {
+  title: 'We Ate the Acid'
+  link: ''
+ },
+ {
+  title: 'Adventures of Huckleberry Finn'
+  link: ''
+ },
+ {
+  title: 'The Kite Runner'
+  link: ''
+ },
+ {
+  title: 'Frankenstein'
+  link: ''
+ },
+ {
+  title: 'Not Without Laughter'
+  link: ''
+ },
+ {
+  title: 'Of Mice and Men'
+  link: ''
+ },
+ {
+  title: 'The Picture of Dorain Gray'
+  link: ''
+ },
+ {
+  title: 'Treasure Island'
+  link: ''
+ },
+ {
+  title: 'War and Peace'
+  link: ''
+ },
+ {
+  title: 'We the Living'
+  link: ''
+ },
+ {
+  title: 'A Raisin in the Sun'
+  link: ''
+ },
+ {
+  title: 'Jitterbug Perfume'
+  link: ''
+ },
+ {
+  title: 'Their Eyes Were Watching God'
+  link: ''
+ },
+]

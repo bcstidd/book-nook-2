@@ -4,6 +4,19 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
+var fs = require('fs')
+
+const multer = require('multer');
+ 
+const imageStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+});
+ 
 
 const session = require('express-session')
 const passport = require('passport')
@@ -18,6 +31,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var booksRouter = require('./routes/books');
 var reviewsRouter = require('./routes/reviews');
+// var imageRouter = require('./uploads/images');
 
 var app = express();
 

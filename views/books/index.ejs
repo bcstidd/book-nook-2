@@ -11,6 +11,7 @@
     <tbody>
       <% books.forEach(function(b) { %>
         <tr>
+          <td><%= b.cover %></td>
           <td><%= b.title %></td>
           <td><%= b.author %></td>
           <td><a href="/books/<%= b._id %>">Details</a>

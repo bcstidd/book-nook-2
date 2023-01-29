@@ -2,8 +2,9 @@
 <%if (user) { %>}
 <section id ="show-page">
      <table id="details">
-
-  <th><div>Title:</th>
+      <td><div><%=image.cover%>
+      <a href="books/<%= book.title/link %>"></a></div></td>
+     <td><div>Title:</div></td>
      <td><%= book.title %></td></div>
      <td><div>Author</td>
      <td><%= book.author %></div></td>
@@ -21,7 +22,7 @@
  <br><br><h2>Add a Review</h2>
  
 <% if(user) { %>
-  <form id="add-review-form" method="GET"
+  <form id="add-review-form" method="POST"
     action="/books/<%= book._id %>/reviews">
     <label>Review:</label>
     <textarea name="content"></textarea>
