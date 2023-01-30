@@ -9,7 +9,7 @@ const imageSchema = new Schema({
 
 const reviewSchema = new Schema({
     
-    review: {
+    content: {
       type: String,
       required: true,
     },
