@@ -13,8 +13,6 @@
      <td><%= book.genre %></div></td>
      <td><div>Page Count<td>
      <td><%= book.pages %></div></td>
-     <td><div>Reviews</td>
-     <td><%= book.reviews %></div></td>
      </table>
 </section>
  <% } %> 
@@ -37,7 +35,6 @@
   </form>
 <% } %> 
 <% if (book.reviews && book.reviews.length) { %>
-  <%= book.reviews[0].reviews.length %>
   <table>
     <thead>
       <tr>
@@ -57,22 +54,24 @@
           <td><%= r.createdAt.toLocaleDateString() %></td>
           <td><%= r.content %></td>
           <td><%= r.rating %></td>
-          <td><% if (user?._id.equals(r.user)) { %>
+          <td>
+           <% if (user?._id.equals(r.user)) { %>
               <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
               </form>
-            <% } %>
-          </td>
-        </tr>
-      <% }); %>
-      <tr>
-        <td colspan="3"></td>
-        <td><strong><%= (total / book.reviews.length).toFixed(1) %></strong></td>
-      </tr>
-    </tbody>
-  </table>
+              <a href="/books/<%= book._id %>/<%= r.id %>/edit">Edit Review</a>
+              <button type="submit"></button> 
+           <% } %>
+      </td>
+    </tr> 
+  <% }); %>
   
-<% } else { %>
-  <h5>Be the first to review!</h5>
-<% } %> 
-<%- include('../partials/footer') %>
+  <tr>
+    <td colspan="3">Average Rating</td>
+    <td><strong><%= (total / book.reviews.length).toFixed(1) %></strong></td>
+  </tr>
+  </tbody>
+  </table>
+    <% } else { %>
+    <h5>Be the first to review!</h5>
+    <% } %> 

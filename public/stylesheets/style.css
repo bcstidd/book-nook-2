@@ -29,6 +29,8 @@ h1 {
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
   margin-top: 100px;
   font-size:x-large;
 }

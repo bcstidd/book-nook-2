@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<% if(user) { %>
+    <form
+      action="/books/<%= b._id %>/<%=review._id%>/reviews?_method=PUT" method="POST">
+      <label>Review:</label>
+      <textarea name="content"> <%= review.content %></textarea>
+      <input type="submit" value="Update Review">
+    </form>
+  <% } %> 
+   
+<%- include('../partials/footer') %>
