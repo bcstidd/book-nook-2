@@ -21,13 +21,15 @@ a {
   color: #00B7FF;
 }
 
-h1 {
+#main > h1{
   color: white;
-  font-style: (to right, #553c9a 45%, #ee4b2b);
-
-  
+  font-size: 60px;
 }
 
+h2 {
+  color: white;
+  margin-bottom: 40px;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -52,10 +54,9 @@ th {
   height: 34px;
 }
 
-h2 {
-  font-size: x-large;
+#collection {
   color: white;
-  border: 2px solid white;
+  margin-top: 50px;
   margin: center;
  }
 
@@ -83,15 +84,20 @@ label{
   flex-direction: column;
 }
 
-#list>tbody {
-  background-color: white;
+/* #details>tbody>td {
+  display: flex;
+  justify-content: space-around;
+} */
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  background-color:rgb(102, 151, 155);
+  width: 100%;
+  height: 30px;
 }
-#new-form *,
-#add-review-form *,
-#add-performer-form * {
-  font-size: 20px;
-  padding: 5px;
-  border-radius: 5px;
+td {
+  white-space: nowrap;
 }
 
 #new-form input[type="submit"] {
@@ -100,4 +106,70 @@ label{
   margin-left: auto;
 }
   
+#add-review-form {
+  height: 80px;
+  display: flex;
+  justify-content:flex-start;
+}
+#add-review-form input[type="submit"] {
+  height: 30px;
+}
 
+#pic {
+  width: 40px;
+}
+#content {
+  width: 265px;
+  height: 50px;
+}
+
+td>#reviewtext {
+  width: 150px;
+}
+
+#comments {
+  height:50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#comments > tbody {
+  border: 2px solid white;
+}
+
+#update input[type="submit"] {
+  display: flex;
+  color: green;
+  margin-top: 10px;
+  height: 40px; 
+  font-size: medium;
+}
+
+
+label {
+  font-size: x-large;
+ 
+}
+
+h1 {
+  color: white;
+}
+#edit textarea {
+  height: 150px;
+  width: 550px;
+  font-size: larger;
+}
+#review {
+ color: red;
+ margin-top: 50px;
+
+}
+select {
+  height: 30px;
+  background-color: lightgray;
+}
+
+td.review-user {
+  width: 30%;
+}
