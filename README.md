@@ -26,6 +26,10 @@
     <img src="https://i.imgur.com/J4Kfw3U.png">
     <li>Give your input on your favorites.</li>
     <img src="https://i.imgur.com/bABhFFR.png">
+    <p>Change your mind? Change your review!<p>
+    <img src="https://i.imgur.com/DntmCE5.png">
+    <p>If you decide to remove your review, simply delete it.<p>
+    <img src="https://i.imgur.com/OUMOurn.png">
     <p>Learn all about Classic Literature and make new friends in one convenient space!</p>
     <br>
     <ul>Icebox Features</ul>
@@ -35,5 +39,16 @@
     <li>Build a local book club yourself</li>
 
 <h2><a href="https://book-nook-2.herokuapp.com/">Check out the app</a><h2>
+
+<ul>Languages and tools used to make the app include:<ul>
+<li>JavaScript</li>
+<li>HTML/CSS</li>
+<li>Express</li>
+<li>Node.js</li>
+<li>MongoDB</li>
+<li>Mongoose</li>
+<li>Heroku</li>
+
+
 </body>
 </html>
